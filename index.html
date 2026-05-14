@@ -275,6 +275,15 @@
 </div>
 
 <script>
+    //邮箱复制功能
+    function copyEmail() {
+        const email = "2388368435@qq.com";
+        navigator.clipboard.writeText(email).then(() => {
+            const toast = document.getElementById('toast');
+            toast.style.opacity = '1';
+            setTimeout(() => { toast.style.opacity = '0'; }, 2000);
+        });
+    }
     // 简单的平滑滚动效果
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
